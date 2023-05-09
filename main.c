@@ -61,14 +61,12 @@ void blockcmp(){
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
 void datecmp(){
    printf("date compare\n");
-
-   stat("text1", &stat1);
+   
    time1 = localtime(&stat1.st_mtime);
    int year1 = time1->tm_year;
    int mon1 = time1->tm_mon;
    int day1 = time1->tm_mday;
 
-   stat("text2", &stat2);
    time2 = localtime(&stat2.st_mtime);
    int year2 = time2->tm_year;
    int mon2 = time2->tm_mon;
